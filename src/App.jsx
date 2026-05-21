@@ -265,7 +265,7 @@ function App() {
           {/* 셀 4: 입체적 젤리 CTA 버튼 영역 */}
           <div className="grid-cell cell-cta-button" onClick={() => setIsOrderOpen(true)}>
             <button className="btn-jelly grid-btn-cta">
-              Order Mellob Stand →
+              Order Mellob Stand
               <ArrowRight className="btn-arrow" size={24} />
             </button>
           </div>
@@ -394,7 +394,7 @@ function App() {
               내 방의 밀도를 바꾸는<br />가장 귀여운 오브제.
             </h2>
             <button className="btn-jelly btn-epic-action" onClick={() => setIsOrderOpen(true)}>
-              Order Mellob Stand →
+              Order Mellob Stand
               <ArrowRight className="btn-arrow bounce-arrow" size={24} />
             </button>
           </div>
