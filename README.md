@@ -8,8 +8,8 @@
 * **개발 인원:** 개인 프로젝트 (기여도 100%)
 
 ## 2. 배포 및 관련 링크
-* **Live Demo:** [배포된 웹사이트 링크](https://mellobe.vercel.app)
-* **GitHub Repository:** [GitHub 저장소 링크](https://github.com/user/frameLanding)
+* **Live Demo:** https://sunny950511-ux.github.io/Mellobe/
+* **GitHub Repository:** https://github.com/sunny950511-ux/Mellobe
 
 ---
 
