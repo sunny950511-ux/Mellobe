@@ -44,12 +44,12 @@ function BrandStory() {
            ========================================== */}
         <div className="value-zone">
           <div className="value-header">
-            <div className="value-badges">
-              <span className="badge-pill">Non-Toxic</span>
-              <span className="badge-pill">Eco-Certified</span>
-              <span className="badge-pill">Vegan Silicon</span>
-            </div>
             <h2 className="value-title">지구를 생각하는 마음은<br />생각보다 말랑하니까.</h2>
+            <div className="value-hashtags">
+              <span>#Non-Toxic</span>
+              <span>#Eco-Certified</span>
+              <span>#Vegan-Silicon</span>
+            </div>
           </div>
 
           <div className="value-grid">

@@ -18,34 +18,30 @@
   margin-bottom: 50px;
 }
 
-.value-badges {
+.value-hashtags {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 16px;
+  margin-top: 20px;
 }
 
-.badge-pill {
-  background-color: var(--pure-white);
+.value-hashtags span {
   color: var(--primary-forest);
-  border: 2px solid var(--primary-forest);
-  padding: 8px 18px;
-  border-radius: 9999px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  box-shadow: 2px 2px 0px 0px var(--primary-forest);
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: default;
   animation: pillDrop 0.8s var(--ease-jelly) both;
 }
 
-.value-badges span:nth-child(1) {
+.value-hashtags span:nth-child(1) {
   animation-delay: 0.1s;
 }
 
-.value-badges span:nth-child(2) {
+.value-hashtags span:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.value-badges span:nth-child(3) {
+.value-hashtags span:nth-child(3) {
   animation-delay: 0.3s;
 }
 
