@@ -217,6 +217,11 @@
   background-color: #fffde8;
 }
 
+.process-card.active:hover {
+  transform: translateY(-8px);
+  box-shadow: 12px 12px 0px 0px var(--primary-forest);
+}
+
 .card-num {
   font-family: var(--font-heading);
   font-size: 1.2rem;

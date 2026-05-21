@@ -1,7 +1,8 @@
 /* SECTION 4.5: UNBOXING & SPEC */
 .section-unboxing-spec {
   padding: 100px 0;
-  background-color: transparent; /* 부모 다크 테마 배경 투과 */
+  background-color: transparent;
+  /* 부모 다크 테마 배경 투과 */
   border-bottom: 3px solid var(--primary-forest);
 }
 
@@ -29,43 +30,29 @@
   color: var(--accent-coral);
 }
 
-.spec-main-title {
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-  color: var(--primary-forest);
-  font-weight: 800;
-}
-
 .unboxing-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start; /* 상단 수평 밸런스를 맞추기 위해 start 정렬 */
-}
-
-/* 좌측: 비주얼 인터랙티브 존 */
-.unboxing-visual-zone {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 72px; /* 우측 텍스트 영역 높이에 매칭시켜 박스 윗선을 평행하게 일치시킴 */
+  grid-template-rows: auto auto;
+  gap: 28px 80px;
+  align-items: stretch;
 }
 
 .package-interactive-card {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1 / 1;
-  background-color: var(--bg-butter);
+  max-width: 500px;
+  justify-self: end;
+  background-color: var(--pure-white);
   border: 3px solid var(--primary-forest);
-  border-radius: 28px;
-  box-shadow: 6px 6px 0px var(--primary-forest);
+  border-radius: 20px;
+  box-shadow: 4px 4px 0px var(--primary-forest);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  cursor: pointer;
-  overflow: visible; /* 스티커 튀어 나올 때 잘림 방지 */
-  transition: transform 0.3s var(--ease-jelly);
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .package-box-wrapper {
@@ -74,17 +61,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.4s var(--ease-jelly);
+  margin: 0;
+  padding: 0;
 }
 
 .package-main-img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border: 3px solid var(--primary-forest);
-  border-radius: 20px;
-  box-shadow: 4px 4px 0px var(--primary-forest);
-  transition: transform 0.4s var(--ease-jelly);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 쫀득한 스티커 오버레이 데코레이션 */
@@ -103,7 +87,7 @@
   transform: scale(0.5) translate(0, 0);
   pointer-events: none;
   z-index: 10;
-  transition: 
+  transition:
     transform 0.5s var(--ease-jelly),
     opacity 0.4s ease;
 }
@@ -130,41 +114,18 @@
   background-color: #ffe675;
 }
 
-/* 호버 시 쫀득하고 탄력 있는 박스 들썩임 & 스티커 분출 */
-.package-interactive-card:hover {
-  transform: translateY(-4px);
-}
-
-.package-interactive-card:hover .package-box-wrapper {
-  transform: scale(1.05, 0.95) rotate(-2deg);
-}
-
-.package-interactive-card:hover .package-main-img {
-  transform: scale(1.08) rotate(3deg);
-}
-
-.package-interactive-card:hover .item-1 {
-  opacity: 1;
-  transform: translate(-35px, -35px) rotate(-14deg) scale(1.1);
-}
-
-.package-interactive-card:hover .item-2 {
-  opacity: 1;
-  transform: translate(35px, -30px) rotate(12deg) scale(1.1);
-}
-
-.package-interactive-card:hover .item-3 {
-  opacity: 1;
-  transform: translate(25px, 25px) rotate(-8deg) scale(1.1);
-}
-
 .package-tagline {
-  margin-top: 28px;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: end;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 0;
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--primary-forest);
-  max-width: 440px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .bold-eco {
@@ -173,9 +134,11 @@
   text-underline-offset: 4px;
 }
 
-/* 우측 스펙 테이블 */
+/* 우측 스펙  */
 .spec-table-zone {
   text-align: left;
+  display: block;
+  height: auto;
 }
 
 .spec-table-title {
@@ -198,11 +161,16 @@
   box-shadow: 4px 4px 0px var(--primary-forest);
   overflow: hidden;
   background-color: var(--pure-white);
-  margin-bottom: 24px;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  justify-self: start;
+  box-sizing: border-box;
 }
 
 .spec-detail-table {
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
   text-align: left;
 }
@@ -233,6 +201,15 @@
   font-weight: 600;
 }
 
+.spec-footer-alert-wrapper {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: start;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
 .spec-footer-alert {
   display: inline-flex;
   align-items: center;
@@ -255,6 +232,7 @@
   .unboxing-layout {
     gap: 40px;
   }
+
   .spec-detail-table th {
     width: 30%;
   }
@@ -262,31 +240,47 @@
 
 @media (max-width: 768px) {
   .unboxing-layout {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-  .unboxing-visual-zone {
-    width: 100%;
-    margin-top: 0; /* 모바일 세로 1열 정렬 시에는 상단 여백 리셋 */
-  }
-  .package-interactive-card {
-    max-width: 340px;
-  }
-  .spec-table-zone {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+  }
+
+  .package-interactive-card {
+    max-width: 340px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .package-tagline {
+    margin-top: 0;
+    margin-bottom: 24px;
+    max-width: 340px;
     text-align: center;
   }
+
   .table-wrapper {
     width: 100%;
     max-width: 500px;
+    height: auto;
+    margin-bottom: 0;
   }
+
+  .spec-detail-table {
+    height: auto;
+  }
+
+  .spec-footer-alert-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .spec-detail-table th {
     padding: 12px 14px;
     width: 35%;
   }
+
   .spec-detail-table td {
     padding: 12px 14px;
     font-size: 0.88rem;
@@ -299,10 +293,12 @@
     max-width: 280px;
     padding: 16px;
   }
+
   .sticker-overlay-item {
     font-size: 0.8rem;
     padding: 6px 12px;
   }
+
   .package-tagline {
     font-size: 0.95rem;
     padding: 0 10px;
@@ -328,8 +324,9 @@
 }
 
 .theme-dark .package-interactive-card {
-  border-color: var(--bg-butter);
-  box-shadow: 6px 6px 0px var(--bg-butter);
+  border: 3px solid var(--bg-butter);
+  box-shadow: 4px 4px 0px var(--bg-butter);
+  background-color: #0d4f2e;
 }
 
 .theme-dark .sticker-overlay-item {
@@ -358,11 +355,13 @@
 .theme-dark .table-wrapper {
   border-color: var(--bg-butter);
   box-shadow: 4px 4px 0px var(--bg-butter);
-  background-color: #0d4f2e; /* 다크 테마용 진한 에코그린 */
+  background-color: #0d4f2e;
+  /* 다크 테마용 진한 에코그린 */
 }
 
 .theme-dark .spec-detail-table th {
-  background-color: #083820; /* 내부 헤더 구분 다크그린 */
+  background-color: #083820;
+  /* 내부 헤더 구분 다크그린 */
   color: var(--bg-butter);
   border-right-color: rgba(255, 255, 255, 0.12);
   border-bottom-color: rgba(255, 255, 255, 0.12);

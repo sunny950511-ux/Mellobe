@@ -20,6 +20,9 @@ function FeverLab() {
   return (
     <section className="section-detail">
       <div className="container">
+        <div className="detail-section-header">
+          <span className="gallery-badge">#MELLOBE_LAB</span>
+        </div>
         <div className="detail-layout">
 
           {/* 좌측: 실시간 반응형 조명 그래픽 캔버스 */}
@@ -34,7 +37,6 @@ function FeverLab() {
               transition: 'background 0.4s ease'
             }}
           >
-            <div className="canvas-title">MELLOBE LAB</div>
             <div className="lamp-visualizer-container">
 
               {/* 램프 본체 3D 느낌 조립 그래픽 */}
@@ -102,13 +104,15 @@ function FeverLab() {
 
           {/* 우측: 컨트롤 탭 메뉴 */}
           <div className="detail-control">
-            <h2 className="detail-title">
-              만지고, 구부리고, 바꾸고.<br />
-              내 손끝에서 켜지는 텍스처 무드.
-            </h2>
-            <p className="detail-desc">
-              스위치를 활용하여 실시간으로 변화하는 무드를 확인해 보세요.
-            </p>
+            <div className="detail-info-header">
+              <h2 className="detail-title">
+                만지고, 구부리고, 바꾸고.<br />
+                내 손끝에서 켜지는 텍스처 무드.
+              </h2>
+              <p className="detail-desc">
+                스위치를 활용하여 실시간으로 변화하는 무드를 확인해 보세요.
+              </p>
+            </div>
 
             {/* 컨트롤 그룹 1: 갓 패턴 체인지 */}
             <div className="control-group">
@@ -122,21 +126,21 @@ function FeverLab() {
                   onClick={() => handlePatternChange('green-checker')}
                 >
                   <span className="dot-preview green"></span>
-                  포레스트 그린
+                  Green
                 </button>
                 <button
                   className={`chip-btn ${pattern === 'coral-checker' ? 'active' : ''}`}
                   onClick={() => handlePatternChange('coral-checker')}
                 >
                   <span className="dot-preview coral"></span>
-                  코랄 탠저린
+                  Tangerine
                 </button>
                 <button
                   className={`chip-btn ${pattern === 'butter-cream' ? 'active' : ''}`}
                   onClick={() => handlePatternChange('butter-cream')}
                 >
                   <span className="dot-preview butter"></span>
-                  클래식 크림
+                  Cream
                 </button>
               </div>
             </div>
@@ -147,20 +151,28 @@ function FeverLab() {
                 <Sun size={18} />
                 터치 디밍 조절 (3단)
               </label>
-              <div className="dimming-switch-bg">
-                <div
-                  className="dimming-slider-thumb"
-                  style={{ left: `calc(${(dimmingLevel - 1) * 33.33}% + 4px)` }}
-                ></div>
-                {[1, 2, 3].map((level) => (
-                  <button
-                    key={level}
-                    className={`dim-btn ${dimmingLevel === level ? 'active' : ''}`}
-                    onClick={() => setDimmingLevel(level)}
-                  >
-                    {level === 1 ? 'Muted' : level === 2 ? 'Warm' : 'Bright'}
-                  </button>
-                ))}
+              <div className="pattern-chips">
+                <button
+                  className={`chip-btn ${dimmingLevel === 1 ? 'active' : ''}`}
+                  onClick={() => setDimmingLevel(1)}
+                >
+                  <span className="dot-preview" style={{ backgroundColor: 'rgba(255, 107, 53, 0.3)' }}></span>
+                  Muted
+                </button>
+                <button
+                  className={`chip-btn ${dimmingLevel === 2 ? 'active' : ''}`}
+                  onClick={() => setDimmingLevel(2)}
+                >
+                  <span className="dot-preview" style={{ backgroundColor: 'rgba(255, 107, 53, 0.65)' }}></span>
+                  Warm
+                </button>
+                <button
+                  className={`chip-btn ${dimmingLevel === 3 ? 'active' : ''}`}
+                  onClick={() => setDimmingLevel(3)}
+                >
+                  <span className="dot-preview" style={{ backgroundColor: 'rgba(255, 107, 53, 1)' }}></span>
+                  Bright
+                </button>
               </div>
             </div>
 

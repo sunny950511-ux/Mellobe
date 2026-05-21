@@ -42,3 +42,15 @@ body {
   border: 2px solid var(--bg-butter);
   border-radius: 10px;
 }
+
+/* 모바일에서 스크롤바 완전 숨김 */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+}

@@ -105,10 +105,7 @@ html {
   letter-spacing: 0.5px;
 }
 
-/* 다크 테마 전환 시 네비게이션 색상 보정 */
-.theme-dark .nav-item {
-  color: var(--bg-butter);
-}
+
 
 /* 클릭 움직임 인터렉션 강도 조절 ( scale(1.04) 정도로 살짝만 반응하여 덜 피로하게 ) */
 .nav-item:hover {
@@ -127,10 +124,6 @@ html {
   transition: border-color 0.6s ease;
 }
 
-/* 다크 테마일 때 테두리 색상 보정 */
-.theme-dark .dot {
-  border-color: var(--bg-butter);
-}
 
 .dot-primary {
   background-color: var(--primary-forest);
@@ -345,15 +338,14 @@ html {
 
 .cell-title-brand .grid-main-title {
   font-family: var(--font-heading);
-  font-size: clamp(4rem, 9.5vw, 8rem);
-  /* 태블릿 등 좁은 가로 폭에서 텍스트 줄바꿈 방지 */
+  font-size: clamp(5rem, 12vw, 10.5rem); /* 4rem~8rem -> 5rem~10.5rem (약 1.3배 확대) */
   font-weight: 900;
   color: var(--accent-coral);
   line-height: 0.85;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px; /* 2px -> 3px */
   margin: 0;
-  text-shadow: 4px 4px 0px #0B4628;
+  text-shadow: 6px 6px 0px #0B4628; /* 4px -> 6px 강화하여 굵기감 향상 */
 }
 
 /* 셀 2: 조명 이미지 로테이션 슬라이더 (우측 전체 세로 영역) */
@@ -1016,6 +1008,7 @@ html {
   font-size: 0.85rem;
   font-weight: 700;
   opacity: 0.7;
+  color: var(--primary-forest);
 }
 
 .price {
@@ -1208,9 +1201,9 @@ html {
   }
 
   .cell-title-brand .grid-main-title {
-    font-size: 3.6rem;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 0px #0B4628;
+    font-size: 4.7rem; /* 3.6rem -> 4.7rem (약 1.3배 확대) */
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 0px #0B4628;
   }
 
   .cell-cta-button {

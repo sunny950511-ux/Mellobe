@@ -44,6 +44,7 @@ function BrandStory() {
            ========================================== */}
         <div className="value-zone">
           <div className="value-header">
+            <span className="gallery-badge">#ECO_FRIENDLY_THREAD</span>
             <h2 className="value-title">지구를 생각하는 마음은<br />생각보다 말랑하니까.</h2>
             <div className="value-hashtags">
               <span>#Non-Toxic</span>
@@ -87,10 +88,6 @@ function BrandStory() {
 
           {/* 좌측: 브랜드 스토리 카피 텍스트 */}
           <div className="story-text-zone">
-            <div className="story-badge">
-              <Leaf size={14} className="leaf-icon" />
-              Eco-Friendly Thread
-            </div>
             <h2 className="story-headline">
               예쁜 건 좋은데,<br />
               지구한테 미안하긴 싫어서.

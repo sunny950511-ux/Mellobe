@@ -34,6 +34,7 @@ function App() {
 
   // OOTD 갤러리 + 언박싱 통합 다크 존 배경 트리거
   const darkZoneRef = useRef(null);
+  const specSectionRef = useRef(null); // UnboxingSpec 섹션 다크→라이트 전환 트리거
   const epicCtaRef = useRef(null); // 에픽 CTA 레퍼런스
   const [isGalleryActive, setIsGalleryActive] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false); // 스크롤 탑 버튼 표시 상태 추가
@@ -59,19 +60,39 @@ function App() {
       setCurrentHeroIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 3500);
 
-    // 다크 존 단일 Observer: 뷰포트에 다크 영역이 주요하게 걸쳐있을 때만 테마 반전 (Flickering 차단)
+    // 갤러리 진입 시 다크모드 ON, 벗어나면 OFF
     const darkZoneObserver = new IntersectionObserver(
       ([entry]) => {
-        setIsGalleryActive(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsGalleryActive(true);
+        } else {
+          setIsGalleryActive(false);
+        }
       },
       {
-        rootMargin: '0px 0px -250px 0px', // 하단 에픽 CTA 진입 시점에 유연하게 꺼지도록 하단 오프셋 적용
+        threshold: 0.05
+      }
+    );
+
+    // UnboxingSpec 진입 시 다크모드 OFF, 위로 나가면 다크모드 ON 복구
+    const specSectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsGalleryActive(false); // 언박싱 섹션 진입 → 라이트모드
+        } else if (entry.boundingClientRect.top > 0) {
+          setIsGalleryActive(true);  // 언박싱 섹션이 뷰포트 아래로 나감 → 갤러리로 돌아온 것이므로 다크모드 복구
+        }
+      },
+      {
         threshold: 0.05
       }
     );
 
     if (darkZoneRef.current) {
       darkZoneObserver.observe(darkZoneRef.current);
+    }
+    if (specSectionRef.current) {
+      specSectionObserver.observe(specSectionRef.current);
     }
 
     // 3. 마우스 추적 선명한 컨페티 트레일 효과
@@ -147,6 +168,9 @@ function App() {
       if (darkZoneRef.current) {
         darkZoneObserver.unobserve(darkZoneRef.current);
       }
+      if (specSectionRef.current) {
+        specSectionObserver.unobserve(specSectionRef.current);
+      }
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
@@ -209,6 +233,10 @@ function App() {
           <a href="#spec" className="nav-item">
             <span className="dot dot-primary"></span>
             <span className="nav-text">SPEC</span>
+          </a>
+          <a href="#order" className="nav-item">
+            <span className="dot dot-accent"></span>
+            <span className="nav-text">CART</span>
           </a>
         </nav>
       </header>
@@ -308,7 +336,7 @@ function App() {
         <FeverLab />
       </div>
 
-      {/* OOTD 갤러리 + 언박싱 스펙 통합 다크 테마 존 */}
+      {/* OOTD 갤러리만 다크 테마 존 - UnboxingSpec은 제외 */}
       <div className="dark-theme-zone" ref={darkZoneRef}>
         {/* SECTION 4: OOTD GALLERY */}
         <section className="section-gallery" id="gallery">
@@ -378,15 +406,15 @@ function App() {
             </div>
           </div>
         </section>
+      </div>
 
-        {/* SECTION 4.5: UNBOXING & SPEC */}
-        <div id="spec">
-          <UnboxingSpec />
-        </div>
+      {/* SECTION 4.5: UNBOXING & SPEC - 다크 테마 존 밖으로 분리, 진입 시 라이트모드 전환 트리거 */}
+      <div id="spec" ref={specSectionRef}>
+        <UnboxingSpec />
       </div>
 
       {/* SECTION 5: EPIC CTA */}
-      <section className="section-epic-cta" ref={epicCtaRef}>
+      <section className="section-epic-cta" id="order" ref={epicCtaRef}>
         <div className="container">
           <div className="epic-box">
             <span className="epic-small-title">GET YOUR FEVER</span>
