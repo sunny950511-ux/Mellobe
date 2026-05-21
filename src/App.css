@@ -428,16 +428,20 @@ html {
   cursor: pointer;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  transition: background-color 0.4s var(--ease-jelly), transform 0.2s ease;
+  transition: 
+    transform 0.4s var(--ease-jelly),
+    box-shadow 0.4s var(--ease-jelly),
+    background-color 0.4s ease;
 }
 
 .cell-cta-button:hover {
-  background-color: #0B4628;
-  /* 어두운 포레스트 그린으로 다크반전 */
+  transform: translateY(-8px);
+  box-shadow: 12px 12px 0px 0px var(--primary-forest);
 }
 
 .cell-cta-button:active {
-  background-color: #08331d;
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px var(--primary-forest);
 }
 
 .grid-btn-cta {
@@ -919,6 +923,16 @@ html {
   border-radius: 20px;
 }
 
+.btn-epic-action:hover {
+  transform: translateY(-8px);
+  box-shadow: 12px 12px 0px 0px var(--primary-forest);
+}
+
+.btn-epic-action:active {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px var(--primary-forest);
+}
+
 /* 주기적인 화살표 튕김 */
 .bounce-arrow {
   animation: arrowBounce 1.2s infinite ease-in-out;
@@ -1022,6 +1036,16 @@ html {
   font-size: 1rem;
   border-radius: 12px;
   box-shadow: 3px 3px 0px 0px var(--primary-forest);
+}
+
+.mobile-sticky-cta:hover {
+  transform: translateY(-8px);
+  box-shadow: 12px 12px 0px 0px var(--primary-forest);
+}
+
+.mobile-sticky-cta:active {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px var(--primary-forest);
 }
 
 /* RESPONSIVE MEDIA QUERIES */

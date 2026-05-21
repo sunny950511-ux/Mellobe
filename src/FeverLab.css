@@ -299,8 +299,8 @@
   font-size: 0.95rem;
   /* 1.05rem -> 0.95rem 축소 */
   font-weight: 800;
-  margin-bottom: 8px;
-  /* 16px -> 10px 축소 */
+  margin-bottom: 14px;
+  /* 기존 8px -> 14px 로 갭 확대 */
   color: var(--primary-forest);
 }
 
@@ -378,7 +378,7 @@
   /* 칩 버튼들과 폭 라인 일치시킴 */
   display: flex;
   align-items: center;
-  padding: 6px 0;
+  padding: 28px 0;
 }
 
 .angle-slider {
@@ -386,8 +386,7 @@
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  height: 12px;
-  /* 18px -> 12px 축소 */
+  height: 28px;
   border-radius: 9999px;
   background: var(--pure-white);
   border: 3px solid var(--primary-forest);
@@ -510,7 +509,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 28px;
     overflow-y: visible;
     background-color: var(--pure-white);
     border: 3px solid var(--primary-forest);
@@ -562,7 +561,7 @@
   .control-label {
     justify-content: flex-start;
     font-size: 0.9rem;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     gap: 6px;
   }
 
@@ -612,7 +611,7 @@
   }
 
   .angle-slider {
-    height: 14px;
+    height: 20px;
     border-width: 2px;
     box-shadow: 3px 3px 0px 0px var(--primary-forest);
   }
