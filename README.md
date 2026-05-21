@@ -21,7 +21,7 @@
 * **Intersection Observer API:** 스크롤 높이를 추적해 OOTD 갤러리 영역 진입 시 웹사이트 테마를 자동으로 다크 모드로 반전시키는 스크롤 트리거 기술 적용.
 * **Vanilla JS Mouse Trail (Confetti):** 마우스 좌표를 실시간으로 추적하여 다채로운 파스텔 톤의 도형들이 튀어나와 흩어지는 인터랙션 구현.
 
-### 🤖 AI-Assisted Development (Vibe Coding)
+### AI-Assisted Development (Vibe Coding)
 * **Google Gemini / Antigravity:** 개발 과정 전반에서 AI와 실시간으로 페어 프로그래밍을 진행하여 물리적 모션 수식 설계 및 복잡한 레이아웃 구조화 단축.
 * **AI 활용 목표:** 3D 느낌의 실시간 조명 기울기 및 갓 패턴 시뮬레이터 구현 시 마우스 드래그/입력 좌표 계산의 수식 오류를 줄이고, 단일 파일 내 복잡한 코드를 역할별 컴포넌트로 깔끔하게 리팩토링하는 것을 목표로 설정.
 
