@@ -424,7 +424,7 @@ html {
   margin: 0;
 }
 
-/* 셀 4: 입체적 젤리 CTA 입양 버튼 (두번째 줄 좌측) */
+/* 셀 4: 입체적 젤리 CTA 구매 버튼 (두번째 줄 좌측) */
 .cell-cta-button {
   grid-column: 1 / span 2;
   grid-row: 2;

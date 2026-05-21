@@ -257,15 +257,15 @@ function App() {
           {/* 셀 3: 상세 서술 한글 카피 영역 */}
           <div className="grid-cell cell-description">
             <p className="grid-sub-desc">
-              내 방을 가장 키치하게 밝히는 방법,<br />
-              내 방의 밀도를 바꾸는 지구를 사랑하는 무드
+              내 방의 온도를 바꾸는 불빛,<br />
+              지구를 사랑하는 마음을 담은 조명
             </p>
           </div>
 
-          {/* 셀 4: 입체적 젤리 CTA 입양 버튼 영역 */}
+          {/* 셀 4: 입체적 젤리 CTA 버튼 영역 */}
           <div className="grid-cell cell-cta-button" onClick={() => setIsOrderOpen(true)}>
             <button className="btn-jelly grid-btn-cta">
-              내 책상에 입양하기
+              Order Mellob Stand →
               <ArrowRight className="btn-arrow" size={24} />
             </button>
           </div>
@@ -394,7 +394,7 @@ function App() {
               내 방의 밀도를 바꾸는<br />가장 귀여운 오브제.
             </h2>
             <button className="btn-jelly btn-epic-action" onClick={() => setIsOrderOpen(true)}>
-              내 책상에 입양하기
+              Order Mellob Stand →
               <ArrowRight className="btn-arrow bounce-arrow" size={24} />
             </button>
           </div>
@@ -423,7 +423,7 @@ function App() {
             <span className="price">98,000원</span>
           </div>
           <button className="btn-jelly mobile-sticky-cta" onClick={() => setIsOrderOpen(true)}>
-            입양하기
+            Order Now
           </button>
         </div>
       </div>
