@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Heart, ArrowRight, Sparkles, Shield, ArrowUp } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Heart, ArrowRight, ArrowUp } from 'lucide-react';
 import './App.css';
-import TextType from './TextType';
 import FeverLab from './FeverLab';
 import BrandStory from './BrandStory';
 import UnboxingSpec from './UnboxingSpec';
 import OrderForm from './OrderForm';
 import brandLogo from './assets/brand_logo.png';
-import lampSlideMix from './assets/lamp_slide_mix.png';
 import hero2 from './assets/hero2.png';
 import hero3 from './assets/hero3.png';
 import hero4 from './assets/hero4.png';
@@ -40,20 +38,12 @@ function App() {
   const [showScrollTop, setShowScrollTop] = useState(false); // 스크롤 탑 버튼 표시 상태 추가
   const [isOrderOpen, setIsOrderOpen] = useState(false); // 주문 정보 입력창 노출 상태
 
-  // Hero Image Load Animation
-  const [isHeroLoaded, setIsHeroLoaded] = useState(false);
-
   useEffect(() => {
     // 히어로 이미지 미리 다운로드(프리로드)하여 크로스페이드 시 끊김 깜빡임 차단
     heroImages.forEach((src) => {
       const img = new Image();
       img.src = src;
     });
-
-    // Hero 쫀득 등장 타이밍
-    const timer = setTimeout(() => {
-      setIsHeroLoaded(true);
-    }, 100);
 
     // Hero 자동 이미지 슬라이더 타이머 (3.5초 주기)
     const slideTimer = setInterval(() => {
@@ -88,11 +78,14 @@ function App() {
       }
     );
 
-    if (darkZoneRef.current) {
-      darkZoneObserver.observe(darkZoneRef.current);
+    const currentDarkZone = darkZoneRef.current;
+    const currentSpecSection = specSectionRef.current;
+
+    if (currentDarkZone) {
+      darkZoneObserver.observe(currentDarkZone);
     }
-    if (specSectionRef.current) {
-      specSectionObserver.observe(specSectionRef.current);
+    if (currentSpecSection) {
+      specSectionObserver.observe(currentSpecSection);
     }
 
     // 3. 마우스 추적 선명한 컨페티 트레일 효과
@@ -163,13 +156,12 @@ function App() {
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      clearTimeout(timer);
       clearInterval(slideTimer);
-      if (darkZoneRef.current) {
-        darkZoneObserver.unobserve(darkZoneRef.current);
+      if (currentDarkZone) {
+        darkZoneObserver.unobserve(currentDarkZone);
       }
-      if (specSectionRef.current) {
-        specSectionObserver.unobserve(specSectionRef.current);
+      if (currentSpecSection) {
+        specSectionObserver.unobserve(currentSpecSection);
       }
       window.removeEventListener('mousemove', handleMouseMove);
     };

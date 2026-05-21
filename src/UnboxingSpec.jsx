@@ -1,5 +1,4 @@
-import React from 'react';
-import { Gift, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import './UnboxingSpec.css';
 import unboxingPackage from './assets/unboxing_package.png';
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X, Heart, Sparkles, Check } from 'lucide-react';
 import './OrderForm.css';
 

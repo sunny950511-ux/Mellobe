@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Leaf, Shield, Sparkles } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Shield, Sparkles } from 'lucide-react';
 import './BrandStory.css';
 
 function BrandStory() {
@@ -24,13 +24,14 @@ function BrandStory() {
       { threshold: 0.15 } // 15% 노출되었을 때 애니메이션 트리거
     );
 
-    if (storyLayoutRef.current) {
-      observer.observe(storyLayoutRef.current);
+    const currentRef = storyLayoutRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (storyLayoutRef.current) {
-        observer.unobserve(storyLayoutRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Sun, Compass, RotateCw } from 'lucide-react';
 import './FeverLab.css';
 
