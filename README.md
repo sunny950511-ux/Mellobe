@@ -1,14 +1,14 @@
-# CHECKERBOARD FEVER 제품 홍보 랜딩 페이지
+# MELLOBE 제품 홍보 랜딩 페이지
 
 > "지구를 생각하는 마음과 키치한 감성을 담은 친환경 조명 브랜딩 포트폴리오"
 
 ## 1. 프로젝트 소개
-* **설명:** 버려진 폐페트병을 재활용한 100% 리사이클 자수 원사 갓과 친환경 실리콘 바디를 사용한 장스탠드 조명 'CHECKERBOARD FEVER'를 홍보하기 위한 인터랙티브 브랜딩 랜딩 페이지입니다.
+* **설명:** 버려진 폐페트병을 재활용한 100% 리사이클 자수 원사 갓과 친환경 실리콘 바디를 사용한 장스탠드 조명 브랜드 'MELLOBE'를 홍보하기 위한 인터랙티브 브랜딩 랜딩 페이지입니다.
 * **진행 기간:** 2026.05.19 ~ 2026.05.21
 * **개발 인원:** 개인 프로젝트 (기여도 100%)
 
 ## 2. 배포 및 관련 링크
-* **Live Demo:** [배포된 웹사이트 링크](https://framelanding-demo.example.com)
+* **Live Demo:** [배포된 웹사이트 링크](https://mellobe.vercel.app)
 * **GitHub Repository:** [GitHub 저장소 링크](https://github.com/user/frameLanding)
 
 ---
