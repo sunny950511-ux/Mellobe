@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Leaf, Shield, Sparkles } from 'lucide-react';
+import { Leaf, Shield, Sparkles } from 'lucide-react';
 import './BrandStory.css';
 
 function BrandStory() {
@@ -116,10 +116,11 @@ function BrandStory() {
                 <p className="card-desc">폐페트병 수거 & 정밀 세척</p>
               </div>
 
-              {/* 연결 젤리 화살표 1 */}
-              <div className={`process-arrow arrow-1 ${activeStep >= 2 ? 'active' : ''}`}>
-                <span className="arrow-line"></span>
-                <ArrowRight className="arrow-head" size={18} />
+              {/* 연결 도트 1 */}
+              <div className={`process-step-dots dots-1 ${activeStep >= 2 ? 'active' : ''}`}>
+                <span className="step-dot dot-1"></span>
+                <span className="step-dot dot-2"></span>
+                <span className="step-dot dot-3"></span>
               </div>
 
               {/* 2단계: 리사이클 원사 추출 */}
@@ -136,10 +137,11 @@ function BrandStory() {
                 <p className="card-desc">미세 펠릿 가공 및 원사 추출</p>
               </div>
 
-              {/* 연결 젤리 화살표 2 */}
-              <div className={`process-arrow arrow-2 ${activeStep >= 3 ? 'active' : ''}`}>
-                <span className="arrow-line"></span>
-                <ArrowRight className="arrow-head" size={18} />
+              {/* 연결 도트 2 */}
+              <div className={`process-step-dots dots-2 ${activeStep >= 3 ? 'active' : ''}`}>
+                <span className="step-dot dot-1"></span>
+                <span className="step-dot dot-2"></span>
+                <span className="step-dot dot-3"></span>
               </div>
 
               {/* 3단계: 체커보드 자수 갓 완성 */}
