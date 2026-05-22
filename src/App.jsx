@@ -334,7 +334,7 @@ function App() {
         <section className="section-gallery" id="gallery">
           <div className="container">
             <div className="gallery-header">
-              <span className="gallery-badge">#FEVER_OOTD</span>
+              <span className="gallery-badge">FEVER_OOTD</span>
               <h2 className="gallery-title">
                 불이 꺼지면,<br />
                 나만의 파티가 시작됩니다.

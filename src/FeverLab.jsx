@@ -21,7 +21,7 @@ function FeverLab() {
     <section className="section-detail">
       <div className="container">
         <div className="detail-section-header">
-          <span className="gallery-badge">#MELLOBE_LAB</span>
+          <span className="gallery-badge">MELLOBE_LAB</span>
         </div>
         <div className="detail-layout">
 

@@ -9,7 +9,7 @@ function UnboxingSpec() {
 
         {/* 섹션 인트로 헤더 */}
         <div className="spec-header">
-          <span className="gallery-badge">#UNBOXING_SPEC</span>
+          <span className="gallery-badge">UNBOXING_SPEC</span>
           <h2 className="spec-main-title">언박싱부터 환경을 사랑하는 방법</h2>
         </div>
 
@@ -34,19 +34,19 @@ function UnboxingSpec() {
               <tbody>
                 <tr>
                   <th>모델명</th>
-                  <td>Checkerboard Fever Lamp (Classic Ver.)</td>
+                  <td>Checkerboard Fever Lamp<br />(Classic Ver.)</td>
                 </tr>
                 <tr>
                   <th>크기 / 무게</th>
-                  <td>150mm x 150mm x 320mm / 650g (구부림 형태에 따라 유동적)</td>
+                  <td>150mm x 150mm x 320mm / 650g<br />(구부림 형태에 따라 유동적)</td>
                 </tr>
                 <tr>
                   <th>소재</th>
-                  <td>100% 리사이클 자수 원사 (PET 재생), Bio-Silicone, 스틸 베이스</td>
+                  <td>100% 리사이클 자수 원사 (PET 재생),<br />Bio-Silicone,<br />스틸 베이스</td>
                 </tr>
                 <tr>
                   <th>전원 & 입력</th>
-                  <td>USB Type-C 인터페이스 / 5V 2A (에코 고효율 보드 장착)</td>
+                  <td>USB Type-C 인터페이스,<br />5V 2A (에코 고효율 보드 장착)</td>
                 </tr>
                 <tr>
                   <th>케이블 정보</th>
@@ -66,7 +66,7 @@ function UnboxingSpec() {
 
           {/* 좌측 하단 설명글 */}
           <div className="package-tagline">
-            <span className="bold-eco">100% 생분해 사탕수수 재생 크라프트지</span>로 제작된 시그니처 박스와, 스탠드 몸체나 다이어리에 커스텀 할 수 있는 <strong>젤리 팝 스티커 팩</strong>이 함께 동봉됩니다.
+            <span className="bold-eco">100% 생분해 사탕수수 재생 크라프트지</span>로 제작된 시그니처 박스와,<br />스탠드 몸체나 다이어리에 커스텀 할 수 있는<br /><strong>젤리 팝 스티커 팩</strong>이 함께 동봉됩니다.
           </div>
 
           {/* 우측 하단 무상보증 배지 */}

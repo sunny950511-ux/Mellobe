@@ -45,7 +45,7 @@ function BrandStory() {
            ========================================== */}
         <div className="value-zone">
           <div className="value-header">
-            <span className="gallery-badge">#ECO_FRIENDLY_THREAD</span>
+            <span className="gallery-badge">ECO_FRIENDLY_THREAD</span>
             <h2 className="value-title">지구를 생각하는 마음은<br />생각보다 말랑하니까.</h2>
             <div className="value-hashtags">
               <span>#Non-Toxic</span>

@@ -27,8 +27,14 @@
 
 .value-hashtags span {
   color: var(--primary-forest);
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: rgba(11, 70, 40, 0.08);
+  border: 1.5px solid rgba(11, 70, 40, 0.2);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
   cursor: default;
   animation: pillDrop 0.8s var(--ease-jelly) both;
 }
@@ -332,10 +338,9 @@
   }
 
   .value-hashtags span {
-    font-size: 1.0rem;
-    /* 모바일 해시태그 크기 축소 */
-    font-weight: 700;
-    /* 모바일 해시태그 두께 축소 */
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 4px 12px;
   }
 
   .story-divider {
@@ -387,8 +392,8 @@
   }
 
   .value-hashtags span {
-    font-size: 0.88rem;
-    /* 극모바일 해시태그 한 줄 정렬 */
+    font-size: 0.8rem;
+    padding: 4px 10px;
   }
 
   .story-headline {
